@@ -1,9 +1,13 @@
+<div class="h-200"
+    style="background-image:url(/img/backfround1.webp); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
 @extends('layouts.index')
 @section('content')
-<div class="container my-5">
+<div class="container my-5  ">
 <table class="table table-striped table-bordered table-hover table">
  <thead>
-    <tr>
+    <tr class=" text-light ">
         <th>Nom</th>
         <th>Prenom</th>
         <th>Age</th>
@@ -19,7 +23,7 @@
  <tbody>
     @foreach ($joueurs as $joueur )
 
-    <tr>
+    <tr class="text-light" >
         <td>{{$joueur->nom}}</td>
         <td>{{$joueur->prenom}}</td>
         <td>{{$joueur->age}}</td>
@@ -36,5 +40,6 @@
     @endforeach
  </tbody>
 </table>
+</div>
 </div>
 @endsection

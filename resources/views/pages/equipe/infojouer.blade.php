@@ -1,7 +1,10 @@
+<div class="h-100" style="background-image:url(/img/backfround1.webp); background-repeat: no-repeat;
+background-attachment: 100%;
+background-size: cover;">
 @extends('layouts.index')
 @section('content')
-<div class="container my-5">
-<table class="table table-striped table-bordered table-hover table">
+<div class="container my-5 ">
+{{-- <table class="table table-striped table-bordered table-hover table">
  <thead>
     <tr>
         <th>Nom</th>
@@ -17,8 +20,6 @@
     </tr>
  </thead>
  <tbody>
-    {{-- @foreach ($joueurs as $joueur ) --}}
-
     <tr>
         <td>{{$joueurs->nom}}</td>
         <td>{{$joueurs->prenom}}</td>
@@ -33,8 +34,25 @@
         </td>
         <td>{{$joueurs->equipe->nomdeclub}}</td>
     </tr>
-    {{-- @endforeach --}}
  </tbody>
-</table>
+</table> --}}
+
+<div class="row  d-flex justify-content-center align-items-center"  >
+    <div class="col-sm-6 text-center ">
+      <div class="card  rounded  " >
+        <div class="card-body opacity-25 p-5   bg-info  rounded ">
+            <h1>Nom : {{$joueurs->nom}}</h1>
+            <p>Prenom : {{$joueurs->prenom}},  Age : {{$joueurs->age}}</p>
+            <p>Tel : {{$joueurs->telephone}}, Email : {{$joueurs->email}}</p>
+            <p>Genre : {{$joueurs->genre}}, Pays de Joueur : {{$joueurs->pays}}</p>
+            <p>Role : {{$joueurs->role->role}}, Photo :  <img width="10%" class="rounded-pill" src="{{asset('storage/img/'.$joueurs->photo->photo)}}" alt=""></p>
+
+            <p>Equipe : {{$joueurs->equipe->nomdeclub}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
 </div>
 @endsection

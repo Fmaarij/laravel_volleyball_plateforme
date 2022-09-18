@@ -1,5 +1,10 @@
+<div style="background-image:url(img/volly.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
 @extends('layouts.index')
 @section('content')
+
+
 <div class="container my-5">
 {{-- List group --}}
     {{-- <div class="list-group">
@@ -13,7 +18,7 @@
             disabled link item</a>
     </div> --}}
 
-<table class="table table-striped table-bordered table-hover table">
+{{-- <table class="table table-striped table-bordered table-hover table">
  <thead>
     <tr>
         <th>Nom de l'équipe</th>
@@ -23,23 +28,40 @@
     </tr>
  </thead>
  <tbody>
-    @foreach ($equipes as $equipe )
+    @foreach ($equipes as $equipe ) --}}
 
-    <tr>
+    {{-- <tr> --}}
         {{-- {{dd($joueurs)}} --}}
         {{-- @if($joueurs->joueurs->equipe_id ==  $equipe->nomdeclub ) --}}
-        <td>{{$equipe->nomdeclub}}</td>
-        <td>{{$equipe->ville}}</td>
+        {{-- <td>{{$equipe->nomdeclub}}</td>
+        <td></td>
         <td>{{$equipe->maxdejoueurparrole}}</td>
         <td>
             <a href="/showequipe/{{$equipe->id}}">
                 <button class="btn btn-outline-info">Show</button>
             </a>
-        </td>
+        </td> --}}
         {{-- @endif --}}
-    </tr>
+    {{-- </tr>
     @endforeach
  </tbody>
-</table>
+</table> --}}
+<div class="row   "  >
+    @foreach ($equipes as $equipe )
+    <div class="col-sm-6 text-center ">
+      <div class="card  rounded-pill w-50 m-auto " >
+        <div class="card-body opacity-25 w-100 p-5  m-auto bg-info  rounded-pill ">
+          <h5 class="card-title">Nom De Club : {{$equipe->nomdeclub}}</h5>
+          <p class="card-text">Ville De Club : {{$equipe->ville}}</p>
+          <p>Nombre de jouer : 2/{{$equipe->maxdejoueurparrole}}</p>
+          <a href="/showequipe/{{$equipe->id}}" class="">
+            <button class="btn btn-outline-light">Show</button>
+          </a>
+        </div>
+      </div>
+    </div>
+    @endforeach
+  </div>
+</div>
 </div>
 @endsection

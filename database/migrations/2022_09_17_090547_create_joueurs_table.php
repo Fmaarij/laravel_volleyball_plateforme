@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('prenom');
             $table->integer('age');
             $table->integer('telephone');
-            $table->string('email')->unique();
+            $table->string('email');
             $table->string('genre');
             $table->string('pays');
             // $table->string('photo');

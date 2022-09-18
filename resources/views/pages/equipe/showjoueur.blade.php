@@ -1,7 +1,10 @@
+<div class="h-100" style="background-image:url(/img/volly.jpg); background-repeat: no-repeat;
+background-attachment: fixed;
+background-size: cover;">
 @extends('layouts.index')
 @section('content')
-<div class="container my-5">
-<table class="table table-striped table-bordered table-hover table">
+<div class="container my-5 ">
+<table class="table table-striped table-bordered table-hover table text-light">
  <thead>
     <tr>
         <th>Nom de l'équipe</th>
@@ -16,7 +19,7 @@
  <tbody>
 @foreach ($joueurs as $joueur )
 
-<tr>
+<tr class="text-light">
     @if($joueur->equipe->nomdeclub == $equipes->nomdeclub)
     <td>{{$joueur->equipe->nomdeclub}}</td>
     <td>{{$joueur->equipe->ville}}</td>
@@ -34,5 +37,6 @@
 @endforeach
  </tbody>
 </table>
+</div>
 </div>
 @endsection
