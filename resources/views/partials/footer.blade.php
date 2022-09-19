@@ -61,7 +61,7 @@
     <!-- Grid container -->
 
     <!-- Copyright -->
-    <div class="text-center text-light bg-dark p-3 fixed-bottom">
+    <div class="text-center text-light bg-dark pb-4 fixed-bottom">
 
             © 2022 Copyright:
             <a class="text-light" href="#">Vollymolen</a>

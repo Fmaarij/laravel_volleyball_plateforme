@@ -1,6 +1,7 @@
 <div class="h-100" style="background-image:url(img/volly.jpg); background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;">
+
 @extends('layouts.index')
 @section('content')
 
@@ -46,11 +47,11 @@ background-size: cover;">
     @endforeach
  </tbody>
 </table> --}}
-<div class="row   "  >
+<div class="row"  >
     @foreach ($equipes as $equipe )
-    <div class="col-sm-6 text-center ">
-      <div class="card  rounded-pill w-50 m-auto " >
-        <div class="card-body opacity-25 w-100 p-5  m-auto bg-info  rounded-pill ">
+    <div class="col-sm-4 text-center ">
+      <div class="card-body  rounded-pill w-100  m-auto " >
+        <div class="card-body opacity-25 w-100 m-auto bg-info  rounded-pill ">
           <h5 class="card-title">Nom De Club : {{$equipe->nomdeclub}}</h5>
           <p class="card-text">Ville De Club : {{$equipe->ville}}</p>
           <p>Nombre de jouer : 2/{{$equipe->maxdejoueurparrole}}</p>

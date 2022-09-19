@@ -40,13 +40,15 @@ background-size: cover;">
                 </div>
 
                 <div class="pb-3">
-
                     <select name="continent" id="">
                         @foreach ($continents as $continent)
-                            <option value="{{ $continent->id }}">{{ $continent->continent }}</option>
+
+                        {{-- @if ($continent->continent != $continent->equipe->continent_id) --}}
+                        <option value="{{ $continent->id }}">{{ $continent->continent }}</option>
+                        {{-- @endif --}}
                         @endforeach
                     </select>
-
+                    
                 </div>
                 <div class="pb-3">
                     <input class="form-control text-light" style="background: transparent; "name="email"

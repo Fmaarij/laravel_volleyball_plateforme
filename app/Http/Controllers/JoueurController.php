@@ -37,7 +37,9 @@ class JoueurController extends Controller {
     public function create() {
         $roles = Role::all();
         $continents = Continent::all();
-        return view( 'pages.joueur.create', compact('roles','continents') );
+        $equipes = Equipe::all();
+        $joueurs = Joueur::all();
+        return view( 'pages.joueur.create', compact('roles','continents','equipes','joueurs') );
     }
 
     /**
