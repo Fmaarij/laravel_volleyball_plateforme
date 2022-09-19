@@ -9,60 +9,60 @@ background-size: cover;">
         {{-- <div class="container my-5"> --}}
         <div class="container my-5">
 
-                <form action="/createjoueur" method="post" enctype="multipart/form-data">
+                <form action="/createjoueur" method="post" enctype="multipart/form-data" >
                     @csrf
 
-                    <div class="row ">
+                    <div class="row  ">
                         <div class="pb-3">
-                            <input class="form-control" type="text" name="nom" value="Nom">
+                            <input class="form-control text-light" style="background: transparent;border:none;" type="text" name="nom" placeholder="Nom">
                         </div>
                         <div class="pb-3">
-                            <input class="form-control" type="text" name="prenom" value="Prenom">
+                            <input class="form-control text-light" style="background: transparent;border:none;"type="text" name="prenom" placeholder="Prenom">
                         </div>
                         <div class="pb-3">
-                            <input class="form-control" type="text" name="age" value="21">
+                            <input class="form-control text-light" style="background: transparent;border:none;"type="text" name="age" placeholder="age">
                         </div>
                         <div class="pb-3">
-                            <input class="form-control" type="text" name="role" value="1">
+                            <input class="form-control text-light" style="background: transparent;border:none;"type="text" name="role" placeholder="role">
                         </div>
                     </div>
                     <div class="pb-3">
-                        <input class="form-control" type="text" name="telephone" value="0487512546">
+                        <input class="form-control text-light" style="background: transparent;border:none;"type="text" name="telephone" placeholder="Telephone">
                     </div>
                     <div class="pb-3">
-                        <input class="form-control" type="text" name="continent" value="Asie">
+                        <input class="form-control text-light" style="background: transparent;border:none;"type="text" name="continent" placeholder="continent">
                     </div>
                     <div class="pb-3">
-                        <input class="form-control" name="email" value="Eva@gmail.com   ">
+                        <input class="form-control text-light" style="background: transparent;border:none;"name="email" placeholder="email ">
                     </div>
                     <div class="pb-3">
-                        <input class="form-control" name="genre" value="genre   ">
+                        <input class="form-control text-light" style="background: transparent;border:none;"name="genre" placeholder="genre   ">
                     </div>
                     <div class="pb-3">
-                        <input class="form-control" name="pays" value="pays de joueur   ">
+                        <input class="form-control text-light" style="background: transparent;border:none;"name="pays" placeholder="pays de joueur   ">
                     </div>
                     <div class="pb-3">
-                        {{-- <input class="form-control" type="text" class="btn btn-yellow" name='nomdeclub'   value="nomdeclub   "> --}}
+                        {{-- <input class="form-control text-light" style="background: transparent;border:none;"type="text" class="btn btn-yellow" name='nomdeclub'   placeholder="nomdeclub   "> --}}
                         <select name="nomdeclub" id="">
-                            <option value="JetteVolly">JetteVolly</option>
-                            <option value="MolenVolly">MolenVolly</option>
-                            <option value="BruxellesVolly">BruxellesVolly</option>
-                            <option value="IxellesVolly">IxellesVolly</option>
+                            <option placeholder="JetteVolly">JetteVolly</option>
+                            <option placeholder="MolenVolly">MolenVolly</option>
+                            <option placeholder="BruxellesVolly">BruxellesVolly</option>
+                            <option placeholder="IxellesVolly">IxellesVolly</option>
                         </select>
                     </div>
                     <div class="pb-3">
-                        <input class="form-control" type="text" class="btn btn-yellow" name='ville' value="ville   ">
+                        <input class="form-control text-light" style="background: transparent;border:none;"type="text" class="btn btn-yellow" name='ville' placeholder="ville   ">
                     </div>
                     <div class="pb-3">
-                        <input class="form-control" type="text" class="btn btn-yellow" name='pays'
-                            value="pays de jeux   ">
+                        <input class="form-control text-light" style="background: transparent;border:none;"type="text" class="btn btn-yellow" name='pays'
+                            placeholder="pays de jeux   ">
                     </div>
                     <div class="pb-3">
-                        <input class="form-control" type="text" class="btn btn-yellow" name='maxdejoueurparrole'
-                            value="12   ">
+                        <input class="form-control text-light" style="background: transparent;border:none;"type="text" class="btn btn-yellow" name='maxdejoueurparrole'
+                            placeholder="12   ">
                     </div>
                     <div class="pb-3">
-                        <input class="form-control" type="file" class="btn btn-yellow" name='photo'
+                        <input class="form-control text-light" style="background: transparent;border:none;"type="file" class="btn btn-yellow" name='photo'
                             placeholder="photo   ">
                     </div>
                     <div class="pb-3">

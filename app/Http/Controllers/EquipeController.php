@@ -23,7 +23,9 @@ class EquipeController extends Controller
         $continents = Continent::all();
         $joueurs=Joueur::all();
         return view ('pages.equipe.index',compact('equipes', 'continents','joueurs'));
+
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -44,6 +46,7 @@ class EquipeController extends Controller
     public function store(Request $request)
     {
         $equipes = new Equipe;
+        
 
     }
 
