@@ -15,7 +15,7 @@ class JoueurSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('Joueur')->insert([
+        DB::table('joueurs')->insert([
             'nom'=>'Jiovani',
             'prenom'=>'Eva',
             'age'=>22,

@@ -21,7 +21,9 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
     // ] );
     $this->call([
-        JoueurSeeder::class
+        // JoueurSeeder::class,
+        RoleSeeder::class,
+        ContinentSeeder::class,
     ]);
     }
 }

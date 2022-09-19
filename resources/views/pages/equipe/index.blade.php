@@ -1,4 +1,4 @@
-<div style="background-image:url(img/volly.jpg); background-repeat: no-repeat;
+<div class="h-100" style="background-image:url(img/volly.jpg); background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;">
 @extends('layouts.index')
