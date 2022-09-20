@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 // Route Equpie
 Route::get( '/equipeindex', [ EquipeController::class, 'index' ] )->name( 'equipeindex' );
-// Route::get( '/create', [ EquipeController::class, 'create' ] )->name( 'equipecreate' );
-// Route::post( '/createequpie', [ EquipeController::class, 'store' ] );
+Route::get( '/createequipe', [ EquipeController::class, 'create' ] )->name( 'equipecreate' );
+Route::post( '/storeequpie', [ EquipeController::class, 'store' ] );
 Route::get( '/showequipe/{id}', [ EquipeController::class, 'show' ] );
 Route::get( '/showjoueur/{id}', [ EquipeController::class, 'showjoueur'] );
 Route::get( '/infojouer/{id}', [ EquipeController::class, 'infojouer'] );

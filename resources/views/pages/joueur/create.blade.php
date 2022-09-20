@@ -25,9 +25,9 @@ background-size: cover;">
                             name="age" placeholder="age">
                     </div>
                     <div class="pb-3">
-                        <select name="role" id="">
+                        <select name="role_id" id="">
                             @foreach ($roles as $role)
-                                <option placeholder="{{ $role->id }}">{{ $role->role }}</option>
+                                <option value="{{ $role->id }}">{{ $role->role }}</option>
                             @endforeach
                         </select>
                     </div>
@@ -39,17 +39,17 @@ background-size: cover;">
                         name="telephone" placeholder="Telephone">
                 </div>
 
-                <div class="pb-3">
-                    <select name="continent" id="">
-                        @foreach ($continents as $continent)
+                {{-- <div class="pb-3"> --}}
+                    {{-- <select name="continent_id" id=""> --}}
+                        {{-- @foreach ($continents as $continent) --}}
 
                         {{-- @if ($continent->continent != $continent->equipe->continent_id) --}}
-                        <option value="{{ $continent->id }}">{{ $continent->continent }}</option>
+                        {{-- <option value="{{ $continent->id }}">{{ $continent->continent }}</option> --}}
                         {{-- @endif --}}
-                        @endforeach
-                    </select>
-                    
-                </div>
+                        {{-- @endforeach --}}
+                    {{-- </select> --}}
+
+                {{-- </div> --}}
                 <div class="pb-3">
                     <input class="form-control text-light" style="background: transparent; "name="email"
                         placeholder="email ">
@@ -66,31 +66,16 @@ background-size: cover;">
                     <input class="form-control text-light" style="background: transparent; "name="pays"
                         placeholder="pays de joueur   ">
                 </div>
-
                 <div class="pb-3">
-                    <select name="nomdeclub" id="">
-                        <option placeholder="JetteVolly">JetteVolly</option>
-                        <option placeholder="MolenVolly">MolenVolly</option>
-                        <option placeholder="BruxellesVolly">BruxellesVolly</option>
-                        <option placeholder="IxellesVolly">IxellesVolly</option>
-                    </select>
+                    {{-- <input class="form-control text-light" style="background: transparent; "name="equipe_id"
+                        placeholder="Equipe Id   "> --}}
+                        <select name="equipe_id" id="">
+                            @foreach ($equipes as $equipe )
+                            <option value="{{$equipe->id}}">{{$equipe->nomdeclub}}</option>
+                            @endforeach
+                        </select>
                 </div>
 
-                <div class="pb-3">
-                    <input class="form-control text-light" style="background: transparent; "type="text"
-                        class="btn btn-yellow" name='ville' placeholder="ville   ">
-                </div>
-                <div class="pb-3">
-                    <input class="form-control text-light" style="background: transparent; "type="text"
-                        class="btn btn-yellow" name='pays' placeholder="pays de jeux   ">
-                </div>
-
-
-
-                <div class="pb-3">
-                    <input class="form-control text-light" style="background: transparent; "type="text"
-                        class="btn btn-yellow" name='maxdejoueurparrole' placeholder="12   ">
-                </div>
 
                 <div class="pb-3">
                     <input class="form-control text-light" style="background: transparent; "type="file"

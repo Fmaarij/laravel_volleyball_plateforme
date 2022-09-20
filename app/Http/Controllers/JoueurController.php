@@ -22,10 +22,10 @@ class JoueurController extends Controller {
     public function index() {
 
         $joueurs = Joueur::all();
-        $photos=Photo::all();
-        $roles=Role::all();
+        $photos = Photo::all();
+        $roles = Role::all();
         $equipes = Equipe::all();
-        return view( 'pages.joueur.index', compact( 'joueurs','photos','roles','equipes' ) );
+        return view( 'pages.joueur.index', compact( 'joueurs', 'photos', 'roles', 'equipes' ) );
     }
 
     /**
@@ -39,7 +39,7 @@ class JoueurController extends Controller {
         $continents = Continent::all();
         $equipes = Equipe::all();
         $joueurs = Joueur::all();
-        return view( 'pages.joueur.create', compact('roles','continents','equipes','joueurs') );
+        return view( 'pages.joueur.create', compact( 'roles', 'continents', 'equipes', 'joueurs' ) );
     }
 
     /**
@@ -56,23 +56,18 @@ class JoueurController extends Controller {
         $photos->photo = $request->file( 'photo' )->hashName();
         $photos->save();
 
-        $roles = new Role;
-        $roles->role = $request->role;
-        $roles->save();
+        // $roles = new Role;
+        // $roles->role = $request->role;
+        // $roles->save();
 
-        $continents = new Continent;
-        $continents->continent = $request->continent;
-        $continents->save();
+        // $continents = new Continent;
+        // $continents->continent = $request->continent;
+        // $continents->save();
 
-        $equipes = new Equipe;
-        $equipes->nomdeclub = $request->nomdeclub;
-        $equipes->ville = $request->ville;
-        $equipes->pays = $request->pays;
-        $equipes->maxdejoueurparrole = $request->maxdejoueurparrole;
-        $equipes->continent_id = $continents->id;
-        $equipes->save();
+
 
         $joueur = new Joueur;
+        // dd($joueur->equipes->maxdejoueurparrole );
         $joueur->nom = $request->nom;
         $joueur->prenom = $request->prenom;
         $joueur->age = $request->age;
@@ -80,9 +75,22 @@ class JoueurController extends Controller {
         $joueur->email = $request->email;
         $joueur->genre = $request->genre;
         $joueur->pays = $request->pays;
-        $joueur->role_id = $roles->id;
+        $joueur->role_id = $request->role_id;
         $joueur->photo_id = $photos->id;
-        $joueur->equipe_id = $equipes->id;
+
+        $count = 0;
+        $nombremax = Equipe::select('maxdejoueurparrole')->get();
+
+        // dd($nombremax);
+        foreach ($nombremax as $nombremin){
+
+            if( $nombremin->maxdejoueurparrole != $count){
+
+             $joueur->equipe_id = $request->equipe_id;
+             $count++;
+            //  $joueur -> save();
+            }
+        }
         $joueur -> save();
         return redirect()->back();
 

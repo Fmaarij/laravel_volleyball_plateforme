@@ -49,7 +49,7 @@ background-size: cover;">
 </table> --}}
 <div class="row"  >
     @foreach ($equipes as $equipe )
-    <div class="col-sm-4 text-center ">
+    <div class="col-sm-6 text-center ">
       <div class="card-body  rounded-pill w-100  m-auto " >
         <div class="card-body opacity-25 w-100 m-auto bg-info  rounded-pill ">
           <h5 class="card-title">Nom De Club : {{$equipe->nomdeclub}}</h5>

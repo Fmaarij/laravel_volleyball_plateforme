@@ -11,6 +11,11 @@
             <a class="nav-link" href="{{route('equipeindex')}}">Equipe</a>
           </li>
           <li class="nav-item">
+            <a class="nav-link" href="{{route('equipecreate')}}">Ajouter une équipe</a>
+          </li>
+
+
+          <li class="nav-item">
             <a class="nav-link" href="{{route('joueurindex')}}">Joueurs</a>
           </li>
           <li class="nav-item">

@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         // JoueurSeeder::class,
         RoleSeeder::class,
         ContinentSeeder::class,
+        EquipeSeeder::class
     ]);
     }
 }
