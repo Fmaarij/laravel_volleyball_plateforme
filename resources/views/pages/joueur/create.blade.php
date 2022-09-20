@@ -76,7 +76,6 @@ background-size: cover;">
                         </select>
                 </div>
 
-
                 <div class="pb-3">
                     <input class="form-control text-light" style="background: transparent; "type="file"
                         class="btn btn-yellow" name='photo' placeholder="photo   ">

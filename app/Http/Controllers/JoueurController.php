@@ -49,7 +49,7 @@ class JoueurController extends Controller {
     * @return \Illuminate\Http\Response
     */
 
-    public function store( Request $request ) {
+    public function store( Request $request) {
 
         $photos = new Photo;
         Storage::put( 'public/img/', $request->file( 'photo' ) );
@@ -78,19 +78,43 @@ class JoueurController extends Controller {
         $joueur->role_id = $request->role_id;
         $joueur->photo_id = $photos->id;
 
-        $count = 0;
-        $nombremax = Equipe::select('maxdejoueurparrole')->get();
+        // $count = 0;
+        // $nombremax = Equipe::select('maxdejoueurparrole')->get();
 
         // dd($nombremax);
-        foreach ($nombremax as $nombremin){
+        // foreach ($nombremax as $nombremin){
 
-            if( $nombremin->maxdejoueurparrole != $count){
+        //     if( $nombremin->maxdejoueurparrole > 3){
 
-             $joueur->equipe_id = $request->equipe_id;
-             $count++;
-            //  $joueur -> save();
-            }
-        }
+        //      $joueur->equipe_id = $request->equipe_id;
+        //     //  $count++;
+        //     // }
+        // }
+        // $jouers = Joueur::where('joueur->equipe_id', '==', 'equipe->id');
+            // $equipesid = Equipe::select('id')->get();
+            $equipes = Equipe::find($request->equipe_id);
+
+            // dd($equipes);
+            // foreach ($equipes as $equipe) {
+                if($equipes->maxdejoueurparrole >= $equipes->dejaajouter){
+                    // dejaajouter
+                    $equipes->dejaajouter =  $equipes->dejaajouter+1 ;
+                    // $equipes->maxdejoueurparrole--;
+
+                    $equipes->save();
+                    $joueur->equipe_id = $request->equipe_id;
+                }
+                // if(  2 == $equipe->maxdejoueurparrole ){
+
+                    // dd($joueur);
+                    // $joueur->equipe_id = $request->equipe_id;
+                // }
+        // if($joueur->equipe_id == $equipes->maxdejoueurparrole){
+            // if(9 <= $equipes->maxdejoueurparrole){
+            // dd($joueur);
+            // $joueur->equipe_id = $request->equipe_id;
+        // }
+
         $joueur -> save();
         return redirect()->back();
 

@@ -1,4 +1,4 @@
-<div class="h-100" style="background-image:url(/img/backfround1.webp); background-repeat: no-repeat;
+<div style="background-image:url(/img/backfround1.webp); background-repeat: no-repeat;
 background-attachment: 100%;
 background-size: cover;">
 @extends('layouts.index')

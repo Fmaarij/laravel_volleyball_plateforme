@@ -1,4 +1,4 @@
-<div class="h-100"
+<div class="h-auto"
     style="background-image:url(/img/backfround1.webp); background-repeat: no-repeat;
 background-attachment: fixed;
 background-size: cover;">

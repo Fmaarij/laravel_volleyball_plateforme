@@ -9,15 +9,17 @@ background-size: cover;">
                 <div class="row">
                     <div class="col">
                         <div class="pb-3">
-                            <select name="nomdeclub" id="">
+                            <input  class="form text-light" style="background: transparent; "type="text"
+                            class="btn btn-yellow" name='nomdeclub' placeholder="nom de club   ">
+                            {{-- <select name="nomdeclub" id=""> --}}
                                 {{-- @foreach ($equipes as $equipe)
             <option value="{{$equipe->id}}">{{$equipe->nomdeclub}}</option>
             @endforeach --}}
-                                <option placeholder="JetteVolly">JetteVolly</option>
+                                {{-- <option placeholder="JetteVolly">JetteVolly</option>
                                 <option placeholder="MolenVolly">MolenVolly</option>
                                 <option placeholder="BruxellesVolly">BruxellesVolly</option>
-                                <option placeholder="IxellesVolly">IxellesVolly</option>
-                            </select>
+                                <option placeholder="IxellesVolly">IxellesVolly</option> --}}
+                            {{-- </select> --}}
                         </div>
 
                         <div class="pb-3">

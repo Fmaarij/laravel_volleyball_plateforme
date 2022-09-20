@@ -24,7 +24,7 @@ class Joueur extends Model
     // public function continent(){
     //     return $this->hasMany(Continent::class);
     // }
-    // public function joueur(){
-    //     return $this->belongsTo(Joueur::class);
-    // }
+    public function joueur(){
+        return $this->belongsTo(Joueur::class);
+    }
 }
